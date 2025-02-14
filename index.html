@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>BirdQuiz.v6</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>BirdQuiz.v5</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore Bird Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="container">
+        <!-- Home Screen -->
+      <div class="screen" id="homeScreen">
+    <h1>🦜 Bangalore Bird Quiz</h1>
+    <div class="button-container">
+        <button onclick="startQuiz()" class="play-btn">Start </button>
+        <!-- Change from "About" to "About Quiz" -->
+<button onclick="toggleAbout()" class="about-btn">About</button>
+        <button onclick="toggleStats()" class="stats-btn">Stats</button>
+    </div>
+    <div id="aboutContent" class="about-content">
+   <div style="font-family: 'Times New Roman', Times, serif; font-size: 14px; text-align: left;">
+    <div style="font-family: 'Times New Roman', Times, serif; font-size: 14px; text-align: left;">
+    <p>Hi! I'm Rahul Panda, an 18-year-old birdwatcher from Bangalore, India. I created this quiz to improve my (admittedly lousy) bird sound identification skills, and I hope it helps you as well! Whether you're a fellow birding enthusiast or just curious, enjoy the challenge!</p>
+    
+    <br> <!-- Add line break before -->
+    
+    <p>All audio has been taken from <a href="https://www.xeno-canto.org" style="color: blue; text-decoration: underline;" target="_blank" rel="noopener noreferrer">xeno-canto.org</a>, with the list of birds taken from Bangalore's Rural region. Audio samples are of bird calls and not songs to limit variables.</p>
+
+    <br> <!-- Add line break after -->
+    
+    <p>Feel free to contact me via <a href="https://www.instagram.com/racbaard_/" style="color: blue; text-decoration: underline;" target="_blank" rel="noopener noreferrer">Instagram</a> for any queries, and give me a follow if you enjoyed this quiz!</p>
+</div>
+</div>
+    </div>
+    <div id="statsContent" class="stats-content">
+        <p>Total Games: <span id="totalGames">0</span></p>
+        <p>Highest Score: <span id="highestScore">0</span></p>
+    </div>
+</div>
+
+        <!-- Quiz Screen -->
+        <div class="screen" id="quizScreen" style="display: none;">
+            <!-- Changed streak to score in the header -->
+<div class="header">
+    <div class="score-badge" id="scoreBadge">0</div>
+</div>
+            <h2>Which bird is this?</h2>
+            <audio id="birdAudio" controls></audio>
+            <div class="choices" id="choices"></div>
+            <button onclick="nextQuestion()" class="next-btn" id="nextBtn" disabled>Next Question →</button>
+            <button onclick="goHome()" class="home-btn">🏠</button>
+        </div>
+
+       <!-- Update your game over screen div -->
+<div class="screen game-over-screen" id="gameOverScreen" style="display: none;">
+    <h2>Game Over!</h2>
+    <p>You got 3 answers wrong</p>
+    <button onclick="restartGame()" class="play-btn">🔄 Play Again</button>
+    <button onclick="goHome()" class="home-btn">
+    <span>Home</span> <!-- Text for desktop -->
+</button>
+</div>
+    </div>
+    <script src="script.js"></script>
+  <!-- Add at the end of body -->
+<div id="completionCelebration" class="celebration-popup">
+    <div class="celebration-content">
+        <h2>🎉 Congratulations! 🎉</h2>
+        <p>You really are an expert birder!</p>
+        <button onclick="closeCelebration()">Continue</button>
+    </div>
+</div>
+
+<!-- Add confetti library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
